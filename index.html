@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>骰子</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body{background-image: linear-gradient(to right,#021330,#243b6c,#021330);}
+        #header{width: 150px;height: 150px; position: relative;margin: 100px auto;perspective: 500px;perspective-origin: top;}
+        #header .header1{width: 100%;height: 100%;transform-style: preserve-3d;}
+        #header:hover .header1{transform: rotateZ(360deg);transition: 5s;}
+        #header .header1 > div:nth-of-type(1){position: absolute;transform: translateZ(150px);}
+        #header .header1 > div:nth-of-type(3){position: absolute;transform-origin: top; transform: rotateX(90deg);}
+        #header .header1 > div:nth-of-type(4){position: absolute;transform-origin: bottom;transform: rotateX(-90deg);}
+        #header .header1 > div:nth-of-type(5){position: absolute;transform-origin: right;transform: rotateY(90deg);}
+        #header .header1 > div:nth-of-type(6){position: absolute;transform-origin: left;transform: rotateY(-90deg);}
+        .box1{width: 150px;height: 150px;display: flex;border: 1px solid black;
+               justify-content: center;align-items: center;
+        }
+        .box1 div{width: 45px;height: 45px;border-radius: 50%;background: greenyellow;}
+
+        .box2{width: 150px;height: 150px;display: flex;border: 1px solid black;
+            flex-direction: column;justify-content: space-evenly;align-items: center;position: absolute;
+               
+        }
+        .box2 div{width: 35px;height: 35px;border-radius: 50%;background: blue;}
+
+        .box3{width: 100%;height: 100%;display: flex;border: 1px solid black;
+            flex-direction: column;justify-content: space-around;
+            }
+        .box3 div{width: 35px;height: 35px;border-radius: 50%;background: yellow;}
+        .box3 div:nth-of-type(1){margin: 10px;}
+        .box3 div:nth-of-type(2){align-self: center;}
+        .box3 div:nth-of-type(3){align-self: flex-end;margin: 10px;}
+
+        .box4{width: 150px;height: 150px;display: flex;border: 1px solid black;
+            flex-wrap: wrap;}
+        .box4 .idear{width: 100%;display: flex;justify-content: space-between;margin: 10px;}  
+        .box4 .idear:nth-of-type(2){align-items: flex-end;}  
+        .box4 .idear div{width: 35px;height: 35px;border-radius: 50%;background: blueviolet;}
+        
+        .box5{width: 150px;height: 150px;display: flex;border: 1px solid black;
+            flex-wrap: wrap;}
+        .box5 .case{width: 100%;display: flex;justify-content: space-between;}  
+        .box5 .case:nth-of-type(2){align-items: center;justify-content: center;}  
+        .box5 .case:nth-of-type(3){align-items: flex-end;}  
+        .box5 .case div{width: 35px;height: 35px;border-radius: 50%;background: blueviolet;}
+
+        .box6{width: 150px;height: 150px;display: flex;border: 1px solid black;
+            flex-wrap: wrap;}
+        .box6 .hold{width: 100%;display: flex;justify-content: space-around;}  
+        .box6 .hold:nth-of-type(2){align-items: center;}  
+        .box6 .hold:nth-of-type(3){align-items: flex-end;}  
+        .box6 .hold div{width: 35px;height: 35px;border-radius: 50%;background: blueviolet;}
+    </style>
+</head>
+<body>
+    <div id="header">
+    <div class="header1">
+    <div class="box1">
+        <div></div>
+    </div>
+    <div class="box2">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box3">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="box4">
+        <div class="idear">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="idear">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="box5">
+        <div class="case">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="case">
+            <div></div>
+        </div>
+        <div class="case">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="box6">
+        <div class="hold">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="hold">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="hold">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>
